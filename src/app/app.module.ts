@@ -6,7 +6,7 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
 
 import { environment } from '../environments/environment';
 
-
+import { ReactiveFormsModule } from '@angular/forms'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -15,6 +15,7 @@ import { LoadingComponent } from './components/Loading/Loading.component'
 import { UserListPage } from './pages/UserList/UserList.page'
 import { UserPage } from './pages/User/User.page'
 import { HttpClientModule } from '@angular/common/http'
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 
 
@@ -24,15 +25,16 @@ import { HttpClientModule } from '@angular/common/http'
     HeaderComponent,
     UserListPage,
     UserPage,
-    LoadingComponent
+    LoadingComponent,
   ],
   imports: [
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
-    
+    HttpClientModule,
+    ReactiveFormsModule,
+    NgbModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
