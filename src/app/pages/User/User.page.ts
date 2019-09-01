@@ -7,7 +7,7 @@ import { FormGroup, FormControl, Validators } from '@angular/forms'
 
 @Component({
     templateUrl: './User.page.html',
-    styleUrls: ['./User.page.css']
+    styleUrls: ['./Login.page.css']
 })
 
 export class UserPage {
@@ -74,7 +74,6 @@ export class UserPage {
                 id: this.userId,
                 ...this.userForm.value
             }
-            console.log(dados)
 
             this.userservice.update(dados, this.Ids).then((data) => {
                 console.log('result', data);
@@ -91,7 +90,7 @@ export class UserPage {
         }
 
 
-        this.router.navigate(['/'])
+        this.router.navigate(['/list'])
         
     }
 }

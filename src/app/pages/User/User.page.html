@@ -1,9 +1,11 @@
+<header-component></header-component>
 <div class="container mx-sm-2">
     <div class="row centered margin">
         <div class="col-sm-4 col-md-4">
         </div>
         <div class="col-sm-4 col-md-4 jumbotron">
-                <h3>Criar Usuário<span class="badge badge-secondary"></span></h3>
+                <h3 *ngIf="this.userId != null" >Atualizar Usuário<span class="badge badge-secondary"></span></h3>
+                <h3 *ngIf="this.userId == null" >Criar Usuário<span class="badge badge-secondary"></span></h3>
             <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
                 <div class="form-group">
                     <label for="exampleInputEmail1">Nome:</label>
@@ -31,9 +33,11 @@
                 </div>
                 <div class="form-group">
                     <label for="exampleInputEmail1">Telefone:</label>
-                    <input type="tel" name="phone" formControlName="phone" class="form-control" />
+                    <input type="tel" name="phone" formControlName="phone" class="form-control"
+                    mask="(00) 0000-0000" />
                     <span *ngIf="userForm.controls.phone.invalid
-                                && userForm.controls.phone.touched" class="text-danger">
+                                && userForm.controls.phone.touched" class="text-danger"
+                                >
                         Phone is required.
                     </span><br>
                 </div>

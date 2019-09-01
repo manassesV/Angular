@@ -1,4 +1,6 @@
-import {Component} from '@angular/core'
+import { Component } from '@angular/core'
+import { UserLogin } from '../../services/User.login';
+import { ActivatedRoute, Router } from '@angular/router';
 
 
 @Component({
@@ -7,4 +9,24 @@ import {Component} from '@angular/core'
    styleUrls: ['./Header.component.css']
 })
 
-export class HeaderComponent{}
+export class HeaderComponent {
+
+
+   constructor(
+      private userlogin: UserLogin,
+      private route: ActivatedRoute,
+      private router: Router
+   ){
+
+   }
+
+
+   auth(){
+      return this.userlogin.authenticated;
+   }
+
+   logout(){
+      this.userlogin.logout();
+      this.router.navigate(['/']);
+   }
+}
