@@ -1,10 +1,10 @@
 {
   "configVersion": 1,
-  "timestamp": 1567388094825,
+  "timestamp": 1567389412994,
   "index": "/index.html",
   "assetGroups": [
     {
-      "name": "app",
+      "name": "user",
       "installMode": "prefetch",
       "updateMode": "prefetch",
       "urls": [
@@ -36,7 +36,7 @@
     "/assets/icons/icon-72x72.png": "4e354a5e2baf2f5d3f055529561fed9536cb037b",
     "/assets/projetos": "7185aa7f0d38f0b29adb7f8aa331263fe80acf1a",
     "/assets/user.png": "e5dfecab97878c69d7f1bfe485bb621377261464",
-    "/index.html": "d1970814828f49c50dd03fdc2d607b4e0086f0fd",
+    "/index.html": "53c61dd4eb5f16024e987d27e32f7e85fff3d223",
     "/main-es2015.8b957d330f94f31349ff.js": "534fd264f9559b1bada621f54a4aba179aa194c0",
     "/main-es5.4f8b1a25b0a2676a0de9.js": "c28c4480f5d57defd0fe2462be3dad419602ec97",
     "/polyfills-es2015.e954256595c973372414.js": "ae2d1da695b0816436f21ff43f857a42b11a4e17",
