@@ -28,6 +28,7 @@ import { FilterUserPipe } from '../app/components/Pipe/FilterUserPipe';
 import { OrderUserPipe } from '../app/components/Pipe/OrderUserPipe';
 
 import { AuthGuard } from '../app/core/auth.guard';
+import { ServiceWorkerModule } from '@angular/service-worker';
 
 
 
@@ -53,7 +54,8 @@ import { AuthGuard } from '../app/core/auth.guard';
     AppRoutingModule,
     HttpClientModule,
     ReactiveFormsModule,
-    NgbModule.forRoot()
+    NgbModule.forRoot(),
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [
     AuthGuard
