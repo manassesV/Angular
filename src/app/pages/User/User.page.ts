@@ -20,7 +20,7 @@ export class UserPage {
     });
 
     private loading: boolean = false;
-    private userId: string = '';
+    public userId: string = '';
     private Ids: string = '';
     private button: string = 'dados';
 

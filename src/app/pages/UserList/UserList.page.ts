@@ -13,7 +13,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 
 export class UserListPage{
 
-   private array=[] ;
+   public array=[] ;
    public orderUser: string = '';
    public filterUser: string = '';
 
